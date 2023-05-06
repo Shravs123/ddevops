@@ -1,20 +1,28 @@
-pipeline{
-    agent any
-        stages{
-            stage("build"){
-                steps{
-                    echo "building application"
-                }
-            }
-            tage("test"){
-                steps{
-                    echo "testing application"
-                }
-            }
-            tage("deploy"){
-                steps{
-                    echo "deploying application"
-                }
+pipeline {
+
+    agent any 
+
+    stages {
+
+        stage("build") {
+             
+             steps {
+                 echo 'building application'
+             }
+        }
+
+        stage("test") {
+
+            steps {
+                echo 'testing application'
             }
         }
+
+        stage("deploy") {
+
+            steps {
+                echo 'depoying application'
+            }
+        }
+    }
 }
